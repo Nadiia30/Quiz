@@ -11,3 +11,31 @@ const questions = [
     ["When was  the World Wide Web invented?", "1990"],
     ["What city do The Beatles come from?", "Liverpool"]
 ];
+
+// 2. Store the number of questions answered correctly
+let correctAnswers = 0;
+
+const correct = [];
+const incorrect = [];
+
+/* 
+  3. Use a loop to cycle through each question
+      - Present each question to the user
+      - Compare the user's response to answer in the array
+      - If the response matches the answer, the number of correctly
+        answered questions increments by 1
+      - Divide questions answered right and wrong
+*/
+
+for (let i=0; i < questions.length; i++){
+    let question = questions[i][0];
+    let answer = questions[i][1];
+    let response = prompt(question);
+
+    if(response.toLowerCase() === answer.toLowerCase()){
+        correctAnswers++;
+        correct.push(question);
+    } else {
+        incorrect.push(question);
+    }
+}
