@@ -48,3 +48,15 @@ function createListItems(arr){
     }
     return items;
 }
+
+/* 5. Display:
+          - the number of correct answers to the user
+          - lists of questions answered right and wrong
+*/
+document.querySelector("main").innerHTML = `
+    <h1>Congrats! You have ${correctAnswers} correct answers!</h1>
+    <h2>You answered these questions right:</h2>
+    <ol>${createListItems(correct)}</ol>
+    <h2>You answered these questions wrong:</h2>
+    <ol>${createListItems(incorrect)}</ol>
+`;
